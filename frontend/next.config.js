@@ -6,7 +6,7 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "localhost",
-        port: "1337",
+        port: "8082",
         pathname: "/uploads/**",
       },
     ],

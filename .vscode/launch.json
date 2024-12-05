@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Frontend: Next.js",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "cwd": "${workspaceFolder}/frontend",
+            "serverReadyAction": {
+                "pattern": "started server on .+, url: (https?://.+)",
+                "uriFormat": "%s",
+                "action": "debugWithChrome"
+            }
+        },
+        {
+            "name": "Backend: Strapi",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run develop",
+            "cwd": "${workspaceFolder}/backend",
+            "serverReadyAction": {
+                "pattern": "Server listening on",
+                "uriFormat": "http://localhost:8082/admin",
+                "action": "openExternally"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack: Frontend + Backend",
+            "configurations": [
+                "Backend: Strapi",
+                "Frontend: Next.js"
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "fullstack",
+                "order": 1
+            }
+        }
+    ]
+}

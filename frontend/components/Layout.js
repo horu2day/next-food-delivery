@@ -43,7 +43,6 @@ function Navigation() {
 
 export default function Layout(props) {
   const title = "Welcome to Nextjs";
-
   return (
     <div>
       <Head>
