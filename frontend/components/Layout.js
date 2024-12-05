@@ -10,7 +10,7 @@ function Navigation() {
             className="block text-lg max-w-max ext-coolGray-500 hover:text-coolGray-900 font-medium"
             href="/"
           >
-            Food Order App
+            Food Order webApp
           </Link>
         </div>
 
